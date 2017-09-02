@@ -1,6 +1,14 @@
-<apex:page>
-<!-- Begin Default Content REMOVE THIS -->
-<h1>Congratulations</h1>
-This is your new Page
-<!-- End Default Content REMOVE THIS -->
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0">
+	<div class="slds-grid slds-wrap">
+		<div class="slds-size--1-of-1 slds-align_absolute-center">
+			<p class="slds-text-heading_large">Stericylcle Demo Recall Form</p>
+		</div>
+		<div class="slds-size--1-of-1 slds-align_absolute-cente slds-p-horizontal_medium">
+			<p class="slds-text-heading_medium">Your recall form has been submitted</p>
+		</div>
+		<div class="slds-size--1-of-1 slds-align_absolute-cente slds-p-horizontal_medium" ng-if="formData.returnto == 'Manufacturer'">
+			<p class="slds-text-heading_medium">Instructions to return the merchandise to the manufacturer would go here</p>
+		</div>
+	</div>
+
 </apex:page>

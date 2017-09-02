@@ -7,11 +7,25 @@
 	</script>
 	<script src="/soap/ajax/40.0/connection.js" type="text/javascript"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwf3bT7BhOz_-EAqbdx4sRVkhHICPd3Qw&libraries=places"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 	<script src="{!$Resource.ngMap}"></script>
 	<script>
 
-		var app = angular.module('StericylcleDemoApp',['ngMap']);
+		var app = angular.module('StericylcleDemoApp',['ngMap','ngRoute']);
+
+		app.config(function($routeProvider){
+			$routeProvider
+			.when("/", {
+				templateUrl : "/apex/RecallFormMain"	
+			})
+			.when("/done", {
+				templateUrl : "/apex/RecallFormDone"
+			})
+			.otherwise({
+		        templateUrl : "/apex/RecallFormMain"
+		    });
+		});
 
 		app.factory('VFRemotingFactory',function($q,$rootScope){  
 	       var factory = {};  
@@ -38,13 +52,16 @@
 		   return factory;
    		});
 		
-		app.controller('FormCtrl',function($scope,VFRemotingFactory){
+		app.controller('FormCtrl',function($scope,$location,VFRemotingFactory){
 
 			$scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwf3bT7BhOz_-EAqbdx4sRVkhHICPd3Qw&libraries=places";
-			$scope.sessionId = '{!$API.Session_Id}';
-
+			
 			$scope.addAttachment = function(recordID){
 			    var reader = new FileReader();
+			    if (document.getElementById('file-upload-input-01') == null) {
+			    	console.log('field not dom');
+			    	return;
+			    }
 			    var attachFile = document.getElementById('file-upload-input-01').files[0];
 
 			    if(attachFile == undefined){
@@ -80,6 +97,7 @@
 				VFRemotingFactory.registerRecall($scope.formDataAsJSON).then(function(result){
 					console.log('registerRecall result = ' + result.Id);
 					$scope.addAttachment(result.Id);
+					$location.path("/done");
 				});
 			}
 
@@ -125,185 +143,14 @@
 				$scope.place = this.getPlace();
 			}
 
-
-
 		});
 
 	</script>
 	<apex:slds />
-	<body ng-app="StericylcleDemoApp">
-		<div class="slds-scope" ng-controller="FormCtrl">
-			<div class="slds-grid slds-wrap">
-				<div class="slds-size--1-of-1 slds-align_absolute-center">
-					<p class="slds-text-heading_large">Stericylcle Demo Recall Form</p>
-				</div>
-				<div class="slds-size--1-of-1 slds-p-horizontal_medium">
-					<div class="slds-form slds-form_compound">
-						<fieldset class="slds-form-element">
-					      <legend class="slds-form-element__label slds-text-title_caps">Name</legend>
-					      <div class="slds-form-element__group">
-					        <div class="slds-form-element__row">
-					          <div class="slds-form-element slds-size_1-of-2">
-					            <label class="slds-form-element__label" for="input-01">First Name</label>
-					            <input type="text" ng-model="formData.firstName" id="input-01" class="slds-input"/>
-					          </div>
-					          <div class="slds-form-element slds-size_1-of-2">
-					            <label class="slds-form-element__label" for="input-02">Last Name</label>
-					            <input type="text" ng-model="formData.lastName" id="input-02" class="slds-input"/>
-					          </div>
-					        </div>
-					        <div class="slds-form-element__row">
-					        	<div class="slds-form-element slds-size_1-of-1">
-					        		<label class="slds-form-element__label" for="input-email">E-mail Address</label>
-									<input type="text" id="input-email" class="slds-input" ng-model="formData.email"/>
-					        	</div>
-					        </div>
-					      </div>
-					    </fieldset>
-			
-						 <fieldset class="slds-form-element">
-      						<legend class="slds-form-element__label slds-text-title_caps">Address</legend>
-      							<div class="slds-form-element__group">
-      								<div class="slds-form-element__row">
-      									<div class="slds-form-element slds-size_1-of-1">
-											<label class="slds-form-element__label" for="autocomplete">Google Address Lookup</label>
-											<input type="text" places-auto-complete="true" ng-model="formData.gplace" on-place-changed="placeCallback(place)"
-								 			 id="autocomplete" types="['geocode']" class="slds-input" placeholder="Enter your address here"/>
-      									</div>
-      								</div>
-      								<div class="slds-form-element__row">
-      									<div class="slds-form-element slds-size_1-of-1">
-      										<label class="slds-form-element__label" for="autocomplete">Street</label>
-      										<input type="text" id="street_number" class="slds-input address" disabled="" ng-model="formData.street"/>
-      									</div>
-
-      								</div>
-      								<div class="slds-form-element__row">
-							          <div class="slds-form-element slds-size_1-of-2">
-							            <label class="slds-form-element__label" for="input-04">City</label>
-							            <input type="text" id="administrative_area_level_1" class="slds-input" ng-model="formData.city" disabled=""/>
-							            
-							          </div>
-							          <div class="slds-form-element slds-size_1-of-2">
-							            <label class="slds-form-element__label" for="input-05">State</label>
-							            <input type="text" id="locality" class="slds-input address" ng-model="formData.state" disabled=""/>
-							          </div>
-							        </div>
-							        <div class="slds-form-element__row">
-							          <div class="slds-form-element slds-size_1-of-2">
-							            <label class="slds-form-element__label" for="input-06">ZIP Code</label>
-							            <input type="text" id="postal_code" class="slds-input" ng-model="formData.postalCode" disabled=""/>
-							          </div>
-							        </div>
-      							</div>
-      					</fieldset>
-						
-      					<fieldset class="slds-form-element">
-      						<legend class="slds-form-element__label slds-text-title_caps">Recall Information</legend>
-  							<div class="slds-form-element__group">
-  								<div class="slds-form-element__row">
-  									<div class="slds-form-element slds-size_1-of-1">
-  										<label class="slds-form-element__label" for="select-product">Product</label>
-  										<select class="slds-select" id="select-product" ng-model="formData.product">
-											<option>Tylenolz</option>
-											<option>Fitbitz</option>
-										</select>
-  									</div>
-  								</div>
-
-  								<div ng-if="formData.product == 'Tylenolz'">
-	  								<div class="slds-form-element__row">
-	  									<div class="slds-form-element slds-size_1-of-2">
-	  										<label class="slds-form-element__label" for="input-name">NDC #</label>	
-											<input type="text" id="input-tylenolz-ndc" class="slds-input" ng-model="formData.ndc"/>
-	  									</div>
-	  									<div class="slds-form-element slds-size_1-of-2">
-	  										<label class="slds-form-element__label" for="input-name">Lot #</label>	
-											<input type="text" id="input-tylenolz-ndc" class="slds-input" ng-model="formData.lot"/>
-	  									</div>
-	  								</div>
-	  								<div class="slds-form-element__row">
-	  									<div class="slds-form-element slds-size_1-of-1">
-	  										<label class="slds-form-element__label" for="select-product">Did you become sick after taking Tylenolz?</label>
-											<div class="slds-select_container">
-												<select class="slds-select" id="select-tylenolz-sick" ng-model="formData.isSick">
-													<option value="Yes">Yes</option>
-													<option value="No">No</option>
-												</select>
-											</div>
-	  									</div>
-  									</div>
-  								</div>
-
-  								<div ng-if="formData.product == 'Fitbitz'">
-	  								<div class="slds-form-element__row">
-	  									<div class="slds-form-element slds-size_1-of-1">
-	  										<label class="slds-form-element__label" for="input-fitbitz-serialno">Serial No.</label>
-											<input type="text" id="input-fitbitz-serialno" class="slds-input" ng-model="formData.serialno"/>
-	  									</div>
-	  								</div>
-	  								<div class="slds-form-element__row">
-	  									<div class="slds-form-element slds-size_1-of-1">
-	  										<label class="slds-form-element__label" for="select-fitbitz-returnto">Will you return the product to the retailer or manufacturer? </label>
-											<div class="slds-select_container">
-												<select class="slds-select" id="select-fitbitz-returnto" ng-model="formData.returnto">
-													<option value="Retailer">Retailer</option>
-													<option value="Manufacturer">Manufacturer</option>
-												</select>
-											</div>
-	  									</div>
-  									</div>
-  									<div class="slds-form-element__row" ng-show="formData.returnto == 'Retailer'">
-  										<div class="slds-form-element slds-size_1-of-1">
-  											<label class="slds-form-element__label" for="select-fitbitz-retailer">Retailer</label>
-											<div class="slds-select_container">
-												<select class="slds-select" id="select-fitbitz-retailer" ng-model="formData.retailer">
-													<option>Amazon</option>
-													<option>BestBuy</option>
-													<option>CostCo</option>
-													<option>Walmart</option>
-													<option>Other</option>
-												</select>
-											</div>
-  										</div>
-									</div>
-									<div class="slds-form-element__row" ng-show="formData.returnto == 'Manufacturer'">
-										<div class="slds-form-element slds-size_1-of-1">
-											<label class="slds-form-element__label">Product Image</label>
-											<div class="slds-file-selector slds-file-selector_files">
-										      <div class="slds-file-selector__dropzone">
-										        <input type="file" ng-model="formData.file" class="slds-file-selector__input slds-assistive-text" accept="image/png" id="file-upload-input-01" aria-describedby="file-selector-id"/>
-										        <label class="slds-file-selector__body" for="file-upload-input-01">
-										          <span class="slds-file-selector__button slds-button slds-button_neutral">
-										            <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
-										              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#upload')}"></use>
-										            </svg>Upload Files</span>
-										          <span class="slds-file-selector__text slds-medium-show">or Drop Files</span>
-										        </label>
-										      </div>
-										    </div>
-									    </div>
-								    </div>
-  								</div>
-							</div>
-						</fieldset>
-					</div>
-					
-				</div>
-				<div class="slds-size--1-of-1 slds-align_absolute-center">
-					<button class="slds-button slds-button_brand" id="button-register" ng-click="register()">Register</button>
-				</div>
-
-				<!--<pre>{{formDataAsJSON}}</pre>
-				<pre>{{placeDataAsJSON}}</pre>-->
-				
-			</div>
-
-
+	<body ng-app="StericylcleDemoApp" ng-controller="FormCtrl">
+		<div class="slds-scope">
+			<div class="ng-view"></div>
 		</div>
-		
-		
-		
 	</body>
 </html>
 </apex:page>
