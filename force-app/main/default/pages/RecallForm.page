@@ -15,15 +15,17 @@
 		var app = angular.module('StericylcleDemoApp',['ngMap','ngRoute']);
 
 		app.config(function($routeProvider){
+			var context_root = "{!JSENCODE($Site.BaseUrl)}"
+
 			$routeProvider
 			.when("/", {
-				templateUrl : "/apex/RecallFormMain"	
+				templateUrl : context_root + "/apex/RecallFormMain"	
 			})
 			.when("/done", {
-				templateUrl : "/apex/RecallFormDone"
+				templateUrl : context_root + "/apex/RecallFormDone"
 			})
 			.otherwise({
-		        templateUrl : "/apex/RecallFormMain"
+		        templateUrl : context_root + "/apex/RecallFormMain"
 		    });
 		});
 
