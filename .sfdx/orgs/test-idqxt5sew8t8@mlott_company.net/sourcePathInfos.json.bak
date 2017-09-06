@@ -103,41 +103,41 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo",
             "isDirectory": true,
+            "size": 306,
+            "modifiedTime": 1504378612000,
+            "changeTime": 1504378612000,
+            "contentHash": "d264fef96c778c7ffe1cafa86488037de6674cee",
             "isMetadataFile": false,
-            "size": 374,
-            "modifiedTime": 1504725071000,
-            "changeTime": 1504725071000,
-            "isWorkspace": true,
-            "contentHash": "331710a9cc11e24408d18056e7abbc337b8552f8"
+            "state": "u",
+            "isWorkspace": true
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes",
             "isDirectory": true,
+            "size": 136,
+            "modifiedTime": 1504188033000,
+            "changeTime": 1504188033000,
+            "contentHash": "8df5159ed8887ff94ca009dc2cc645c23de98a90",
             "isMetadataFile": false,
-            "size": 204,
-            "modifiedTime": 1504724256000,
-            "changeTime": 1504724256000,
-            "contentHash": "212cf6b8899fedf31140ec6d15a12858da3eb228"
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes/RecallFormController.cls",
         {
+            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes/RecallFormController.cls",
             "isDirectory": false,
+            "isMetadataFile": false,
             "size": 739,
             "modifiedTime": 1504381283000,
             "changeTime": 1504381283000,
-            "contentHash": "16c913f81e6de597498d2b03b67a94946cd19887",
-            "isMetadataFile": false,
-            "state": "u"
+            "contentHash": "16c913f81e6de597498d2b03b67a94946cd19887"
         }
     ],
     [
@@ -507,14 +507,14 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/pages/RecallFormMain.page",
         {
+            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/pages/RecallFormMain.page",
             "isDirectory": false,
+            "isMetadataFile": false,
             "size": 8717,
             "modifiedTime": 1504381835000,
             "changeTime": 1504381835000,
-            "contentHash": "ada293acaa0dd250fe066b37bb7b2c1ea8aa82ce",
-            "isMetadataFile": false,
-            "state": "u"
+            "contentHash": "ada293acaa0dd250fe066b37bb7b2c1ea8aa82ce"
         }
     ],
     [
@@ -528,32 +528,6 @@
             "contentHash": "c874e57ef5828f359ab576743244b14097d2bf5b",
             "isMetadataFile": true,
             "state": "u"
-        }
-    ],
-    [
-        "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes/RecallFormControllerTest.cls",
-        {
-            "state": "u",
-            "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes/RecallFormControllerTest.cls",
-            "isDirectory": false,
-            "isMetadataFile": false,
-            "size": 321,
-            "modifiedTime": 1504725133000,
-            "changeTime": 1504725133000,
-            "contentHash": "e7d79a172c424fc7b7d282c09d05a6cd2ac2098d"
-        }
-    ],
-    [
-        "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes/RecallFormControllerTest.cls-meta.xml",
-        {
-            "state": "u",
-            "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes/RecallFormControllerTest.cls-meta.xml",
-            "isDirectory": false,
-            "isMetadataFile": true,
-            "size": 202,
-            "modifiedTime": 1504724256000,
-            "changeTime": 1504724256000,
-            "contentHash": "88ab9f40166e1aae92ddb44333346713d7fccc41"
         }
     ]
 ]
