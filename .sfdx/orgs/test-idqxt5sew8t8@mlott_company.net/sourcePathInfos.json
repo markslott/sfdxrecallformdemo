@@ -32,14 +32,14 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default",
         {
+            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default",
             "isDirectory": true,
-            "size": 340,
-            "modifiedTime": 1504378583000,
-            "changeTime": 1504378583000,
-            "contentHash": "a4ee75f37669d3f4471dca7ba7695f2d1e3cd74d",
             "isMetadataFile": false,
-            "state": "u"
+            "size": 374,
+            "modifiedTime": 1504734370000,
+            "changeTime": 1504734370000,
+            "contentHash": "4c6d7a34eb3ae04fad597f2cdfbd69f8766040a6"
         }
     ],
     [
@@ -103,28 +103,28 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 374,
             "modifiedTime": 1504725071000,
             "changeTime": 1504725071000,
-            "isWorkspace": true,
-            "contentHash": "331710a9cc11e24408d18056e7abbc337b8552f8"
+            "contentHash": "331710a9cc11e24408d18056e7abbc337b8552f8",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": true
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 204,
             "modifiedTime": 1504724256000,
             "changeTime": 1504724256000,
-            "contentHash": "212cf6b8899fedf31140ec6d15a12858da3eb228"
+            "contentHash": "212cf6b8899fedf31140ec6d15a12858da3eb228",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
@@ -533,27 +533,53 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes/RecallFormControllerTest.cls",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes/RecallFormControllerTest.cls",
             "isDirectory": false,
-            "isMetadataFile": false,
             "size": 321,
             "modifiedTime": 1504725133000,
             "changeTime": 1504725133000,
-            "contentHash": "e7d79a172c424fc7b7d282c09d05a6cd2ac2098d"
+            "contentHash": "e7d79a172c424fc7b7d282c09d05a6cd2ac2098d",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes/RecallFormControllerTest.cls-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/classes/RecallFormControllerTest.cls-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 202,
             "modifiedTime": 1504724256000,
             "changeTime": 1504724256000,
-            "contentHash": "88ab9f40166e1aae92ddb44333346713d7fccc41"
+            "contentHash": "88ab9f40166e1aae92ddb44333346713d7fccc41",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/permissionsets/RecallFormUser.permissionset-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/permissionsets/RecallFormUser.permissionset-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 1479,
+            "modifiedTime": 1504734370000,
+            "changeTime": 1504734370000,
+            "contentHash": "bffeb99c252b7a452db57fa8c523a09fab19cd34"
+        }
+    ],
+    [
+        "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/permissionsets",
+        {
+            "state": "u",
+            "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/permissionsets",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 102,
+            "modifiedTime": 1504734370000,
+            "changeTime": 1504734370000,
+            "contentHash": "319afc338f992c57c8f2b53c0a073da6917d04bd"
         }
     ]
 ]
