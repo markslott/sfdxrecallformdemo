@@ -32,14 +32,14 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 442,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "7c17136ea94bc0b2792911a6cc61b11a16b19079"
+            "contentHash": "7c17136ea94bc0b2792911a6cc61b11a16b19079",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
@@ -149,14 +149,14 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/layouts/Recall__c-Recall Layout.layout-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/layouts/Recall__c-Recall Layout.layout-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 3030,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "db06f62d3644f179d45a51f23b7d37298e339551"
+            "contentHash": "db06f62d3644f179d45a51f23b7d37298e339551",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
@@ -192,92 +192,92 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/Recall__c.object-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/Recall__c.object-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 2181,
             "modifiedTime": 1504378583000,
             "changeTime": 1504378583000,
-            "contentHash": "04ba1802d24816d637150295eb2dffa86eee979a"
+            "contentHash": "04ba1802d24816d637150295eb2dffa86eee979a",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 306,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "4167ac7344999e74ccf75f76db9dbd0c0eac8a4d"
+            "contentHash": "4167ac7344999e74ccf75f76db9dbd0c0eac8a4d",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/Did_you_become_sick_after_taking_Tylenol__c.field-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/Did_you_become_sick_after_taking_Tylenol__c.field-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 882,
             "modifiedTime": 1504378583000,
             "changeTime": 1504378583000,
-            "contentHash": "046602e525e6efc950ea948e0a838cd5b4197e3c"
+            "contentHash": "046602e525e6efc950ea948e0a838cd5b4197e3c",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/Lot__c.field-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/Lot__c.field-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 399,
             "modifiedTime": 1504378583000,
             "changeTime": 1504378583000,
-            "contentHash": "1ec63b9fb6dc0758417edbada50506ba7d74b2fa"
+            "contentHash": "1ec63b9fb6dc0758417edbada50506ba7d74b2fa",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/NDC__c.field-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/NDC__c.field-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 399,
             "modifiedTime": 1504378583000,
             "changeTime": 1504378583000,
-            "contentHash": "d49008ed3f2b8224f2f3a18c16715e82770e306d"
+            "contentHash": "d49008ed3f2b8224f2f3a18c16715e82770e306d",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/Retailer__c.field-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/Retailer__c.field-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 1182,
             "modifiedTime": 1504378583000,
             "changeTime": 1504378583000,
-            "contentHash": "24e9c69f33874e80b5b5fb25c78b2dc915592835"
+            "contentHash": "24e9c69f33874e80b5b5fb25c78b2dc915592835",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/Serial_Number__c.field-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/Serial_Number__c.field-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 418,
             "modifiedTime": 1504378583000,
             "changeTime": 1504378583000,
-            "contentHash": "98febe5c27d1e13fcbc5dae393f30875b87c8a77"
+            "contentHash": "98febe5c27d1e13fcbc5dae393f30875b87c8a77",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
@@ -298,14 +298,14 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/listViews/All.listView-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/listViews/All.listView-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 204,
             "modifiedTime": 1504378583000,
             "changeTime": 1504378583000,
-            "contentHash": "a09136a1a46c72265bcd1de0f4a07ba06ec1e9bd"
+            "contentHash": "a09136a1a46c72265bcd1de0f4a07ba06ec1e9bd",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
@@ -431,16 +431,14 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/permissionsets/RecallFormUser.permissionset-meta.xml",
         {
+            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/permissionsets/RecallFormUser.permissionset-meta.xml",
             "isDirectory": false,
-            "size": 1479,
-            "modifiedTime": 1504734370000,
-            "changeTime": 1504734370000,
-            "contentHash": "bffeb99c252b7a452db57fa8c523a09fab19cd34",
             "isMetadataFile": true,
-            "state": "u",
-            "isWorkspace": false,
-            "isArtifactRoot": false
+            "size": 2404,
+            "modifiedTime": 1504802776000,
+            "changeTime": 1504802776000,
+            "contentHash": "5b926546913a3cdc15edcd982ccc336075d31c97"
         }
     ],
     [
@@ -521,14 +519,14 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/tabs",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/tabs",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 136,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "cea401330fd6df7247cf186ea616b9385445dc88"
+            "contentHash": "cea401330fd6df7247cf186ea616b9385445dc88",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
@@ -564,157 +562,157 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/Contact__c.field-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/Contact__c.field-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 545,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "2e307cab09aa52be09e92e63433994cd3748bf9c"
+            "contentHash": "2e307cab09aa52be09e92e63433994cd3748bf9c",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/Return_To__c.field-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/objects/Recall__c/fields/Return_To__c.field-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 870,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "9910abeda25b39bd27247b2cea9364e2e29fd6cf"
+            "contentHash": "9910abeda25b39bd27247b2cea9364e2e29fd6cf",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/flexipages/Recall_App_UtilityBar.flexipage-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/flexipages/Recall_App_UtilityBar.flexipage-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 384,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "1c50354cc12d250840166bbe1d024a38bbe08eeb"
+            "contentHash": "1c50354cc12d250840166bbe1d024a38bbe08eeb",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/tabs/Recall_Form.tab-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/tabs/Recall_Form.tab-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 241,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "11c147b092425a4428416e6631e55102c5748c02"
+            "contentHash": "11c147b092425a4428416e6631e55102c5748c02",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/applications/Recall_App.app-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/applications/Recall_App.app-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 460,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "f038e991bb4f21630c829c634df4148883ba197c"
+            "contentHash": "f038e991bb4f21630c829c634df4148883ba197c",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 6028,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "008d075fd5e1850291747ce53a625aff5f94e2d5"
+            "contentHash": "008d075fd5e1850291747ce53a625aff5f94e2d5",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 6366,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "792cf878a202ec10efac8b717b44e9d828bb5b58"
+            "contentHash": "792cf878a202ec10efac8b717b44e9d828bb5b58",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/profiles/Admin.profile-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/profiles/Admin.profile-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 18826,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "9d0660b2a6aa07b41a5895c3f4a5987af9ac97e1"
+            "contentHash": "9d0660b2a6aa07b41a5895c3f4a5987af9ac97e1",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 6028,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "008d075fd5e1850291747ce53a625aff5f94e2d5"
+            "contentHash": "008d075fd5e1850291747ce53a625aff5f94e2d5",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/flexipages",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/flexipages",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 102,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "c34b6524e2811a4d39b1e4b9c1e54d49f083dacc"
+            "contentHash": "c34b6524e2811a4d39b1e4b9c1e54d49f083dacc",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/applications",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/applications",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 102,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "f8bf72172a024eb6afbf918d2fb53bb6c3e6c6b2"
+            "contentHash": "f8bf72172a024eb6afbf918d2fb53bb6c3e6c6b2",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/profiles",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/profiles",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 204,
             "modifiedTime": 1504802544000,
             "changeTime": 1504802544000,
-            "contentHash": "9c367b0e719eb8c48c5b0d9cbfb5f580a4bd6717"
+            "contentHash": "9c367b0e719eb8c48c5b0d9cbfb5f580a4bd6717",
+            "isMetadataFile": false,
+            "state": "u"
         }
     ]
 ]
