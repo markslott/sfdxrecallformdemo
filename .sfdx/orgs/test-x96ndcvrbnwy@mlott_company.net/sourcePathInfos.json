@@ -322,15 +322,15 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/pages/RecallForm.page",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/pages/RecallForm.page",
             "isDirectory": false,
-            "isMetadataFile": false,
             "size": 6487,
             "modifiedTime": 1504806948000,
             "changeTime": 1504806948000,
-            "isWorkspace": false,
-            "contentHash": "eea0070334591c2cbf444c5f810ce5e268d79b78"
+            "contentHash": "eea0070334591c2cbf444c5f810ce5e268d79b78",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false
         }
     ],
     [
@@ -739,27 +739,27 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/layouts/Recall__c-Fitbitz Layout.layout-meta.xml",
         {
+            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/layouts/Recall__c-Fitbitz Layout.layout-meta.xml",
             "isDirectory": false,
-            "size": 2097,
-            "modifiedTime": 1504803978000,
-            "changeTime": 1504803978000,
-            "contentHash": "14cf41b0819cdb5410dcfb7754bc2c0874acaf1c",
             "isMetadataFile": true,
-            "state": "u"
+            "size": 2232,
+            "modifiedTime": 1504807607000,
+            "changeTime": 1504807607000,
+            "contentHash": "905ea9fc3c0ec8467d0ad4ce9f451748e0bba486"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/layouts/Recall__c-Tylenolz Layout.layout-meta.xml",
         {
+            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/layouts/Recall__c-Tylenolz Layout.layout-meta.xml",
             "isDirectory": false,
-            "size": 2023,
-            "modifiedTime": 1504803978000,
-            "changeTime": 1504803978000,
-            "contentHash": "39c4a3a43d90d3cb93867cac4348a8ea0b30b068",
             "isMetadataFile": true,
-            "state": "u"
+            "size": 2158,
+            "modifiedTime": 1504807607000,
+            "changeTime": 1504807607000,
+            "contentHash": "1f1e7612ec375820f166f92b959b28eac9d22e4e"
         }
     ],
     [

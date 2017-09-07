@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
   <types>
+    <name>CustomApplication</name>
+    <members>Recall_App</members>
+  </types>
+  <types>
     <name>ApexClass</name>
     <members>RecallFormController</members>
     <members>RecallFormControllerTest</members>
   </types>
   <types>
+    <name>FlexiPage</name>
+    <members>Recall_App_UtilityBar</members>
+  </types>
+  <types>
     <name>Layout</name>
+    <members>Recall__c-Fitbitz Layout</members>
     <members>Recall__c-Recall Layout</members>
+    <members>Recall__c-Tylenolz Layout</members>
   </types>
   <types>
     <name>CustomObject</name>
@@ -15,15 +25,22 @@
   </types>
   <types>
     <name>CustomField</name>
+    <members>Recall__c.Contact__c</members>
     <members>Recall__c.Did_you_become_sick_after_taking_Tylenol__c</members>
     <members>Recall__c.Lot__c</members>
     <members>Recall__c.NDC__c</members>
     <members>Recall__c.Retailer__c</members>
+    <members>Recall__c.Return_To__c</members>
     <members>Recall__c.Serial_Number__c</members>
   </types>
   <types>
     <name>ListView</name>
     <members>Recall__c.All</members>
+  </types>
+  <types>
+    <name>RecordType</name>
+    <members>Recall__c.Fitbitz</members>
+    <members>Recall__c.Tylenolz</members>
   </types>
   <types>
     <name>ApexPage</name>
@@ -36,12 +53,20 @@
     <members>RecallFormUser</members>
   </types>
   <types>
+    <name>Profile</name>
+    <members>Admin</members>
+    <members>Custom%3A Marketing Profile</members>
+    <members>Custom%3A Sales Profile</members>
+    <members>Custom%3A Support Profile</members>
+  </types>
+  <types>
     <name>StaticResource</name>
     <members>forceNg</members>
     <members>ngMap</members>
   </types>
   <types>
     <name>CustomTab</name>
+    <members>Recall_Form</members>
     <members>Recall__c</members>
   </types>
   <version>40.0</version>
