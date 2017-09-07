@@ -53,13 +53,6 @@
     <members>RecallFormUser</members>
   </types>
   <types>
-    <name>Profile</name>
-    <members>Admin</members>
-    <members>Custom%3A Marketing Profile</members>
-    <members>Custom%3A Sales Profile</members>
-    <members>Custom%3A Support Profile</members>
-  </types>
-  <types>
     <name>StaticResource</name>
     <members>forceNg</members>
     <members>ngMap</members>

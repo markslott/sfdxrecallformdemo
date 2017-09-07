@@ -147,14 +147,14 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/layouts/Recall__c-Recall Layout.layout-meta.xml",
         {
+            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/layouts/Recall__c-Recall Layout.layout-meta.xml",
             "isDirectory": false,
-            "size": 3030,
-            "modifiedTime": 1504802544000,
-            "changeTime": 1504802544000,
-            "contentHash": "db06f62d3644f179d45a51f23b7d37298e339551",
             "isMetadataFile": true,
-            "state": "u"
+            "size": 3129,
+            "modifiedTime": 1504808256000,
+            "changeTime": 1504808256000,
+            "contentHash": "17c5539807bd103767a2a60711a916c3fbef4dfe"
         }
     ],
     [
@@ -739,27 +739,27 @@
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/layouts/Recall__c-Fitbitz Layout.layout-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/layouts/Recall__c-Fitbitz Layout.layout-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 2232,
             "modifiedTime": 1504807607000,
             "changeTime": 1504807607000,
-            "contentHash": "905ea9fc3c0ec8467d0ad4ce9f451748e0bba486"
+            "contentHash": "905ea9fc3c0ec8467d0ad4ce9f451748e0bba486",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
         "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/layouts/Recall__c-Tylenolz Layout.layout-meta.xml",
         {
-            "state": "u",
             "sourcePath": "/Users/mlott/eclipse-workspace/StericycleDemo/force-app/main/default/layouts/Recall__c-Tylenolz Layout.layout-meta.xml",
             "isDirectory": false,
-            "isMetadataFile": true,
             "size": 2158,
             "modifiedTime": 1504807607000,
             "changeTime": 1504807607000,
-            "contentHash": "1f1e7612ec375820f166f92b959b28eac9d22e4e"
+            "contentHash": "1f1e7612ec375820f166f92b959b28eac9d22e4e",
+            "isMetadataFile": true,
+            "state": "u"
         }
     ],
     [
