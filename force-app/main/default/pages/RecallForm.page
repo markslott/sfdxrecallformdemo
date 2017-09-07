@@ -14,7 +14,7 @@
 
 		var app = angular.module('StericylcleDemoApp',['ngMap','ngRoute']);
 
-		app.config(function($routeProvider){
+		app.config(function($routeProvider, $locationProvider){
 			var context_root = "{!JSENCODE($Site.BaseUrl)}"
 
 			$routeProvider
@@ -27,6 +27,7 @@
 			.otherwise({
 		        templateUrl : context_root + "/apex/RecallFormMain"
 		    });
+		    $locationProvider.html5Mode(true);
 		});
 
 		app.factory('VFRemotingFactory',function($q,$rootScope){  
@@ -42,21 +43,55 @@
 	           return deferred.promise;  
 	       };
 
-
-
 	       function registerRecall(callback, formData){  
 		       Visualforce.remoting.Manager.invokeAction(  
 		           '{!$RemoteAction.RecallFormController.registerRecall}', formData,
 		           callback,  
 		           {escape: false}  
 		       );
-		   }
+		   };
+
+		   factory.getContact = function(contactId){  
+	           var deferred = $q.defer();  
+	           getContact(function(result){  
+	               $rootScope.$apply(function(){  
+	               	console.log(result);
+	                   deferred.resolve(JSON.parse( result )); 
+	               });  
+	           }, contactId);  
+	           return deferred.promise;  
+	       };
+
+	       function getContact(callback, contactId){  
+		       Visualforce.remoting.Manager.invokeAction(  
+		           '{!$RemoteAction.RecallFormController.getContact}', contactId,
+		           callback,  
+		           {escape: false}  
+		       );
+		   };
+
 		   return factory;
    		});
 		
-		app.controller('FormCtrl',function($scope,$location,VFRemotingFactory){
+		app.controller('FormCtrl',function($scope,$location,$routeParams,VFRemotingFactory){
 
 			$scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwf3bT7BhOz_-EAqbdx4sRVkhHICPd3Qw&libraries=places";
+			$scope.formData = {};
+			$scope.place = {};
+
+
+			var contactId = $location.search().Id;
+			console.log('contactId = ' + contactId);
+			console.log($location.search());
+
+			if (contactId != null) {
+				VFRemotingFactory.getContact(contactId).then(function(result){
+					console.log('getContact result:');
+					console.log(result);
+					$scope.formData = result;
+					
+				});
+			}
 			
 			$scope.addAttachment = function(recordID){
 			    var reader = new FileReader();
@@ -103,9 +138,7 @@
 				});
 			}
 
-			$scope.formData = {};
-			$scope.place = {};
-
+			
 			$scope.$watch('formData', function(f) {
 				$scope.formDataAsJSON = angular.toJson(f, true);
 			},true);
@@ -148,6 +181,7 @@
 		});
 
 	</script>
+	<base href="/"/>
 	<apex:slds />
 	<body ng-app="StericylcleDemoApp" ng-controller="FormCtrl">
 		<div class="slds-scope">
