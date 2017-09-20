@@ -1,0 +1,192 @@
+<apex:page controller="RecallFormController" showHeader="false" standardStyleSheets="false" docType="html-5.0">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript">
+     var __sfdcSessionId = '{!GETSESSIONID()}';
+	</script>
+	<script src="/soap/ajax/40.0/connection.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwf3bT7BhOz_-EAqbdx4sRVkhHICPd3Qw&libraries=places"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<script src="{!$Resource.ngMap}"></script>
+	<script>
+
+		var app = angular.module('StericylcleDemoApp',['ngMap','ngRoute']);
+
+		app.config(function($routeProvider, $locationProvider){
+			var context_root = "{!JSENCODE($Site.BaseUrl)}"
+
+			$routeProvider
+			.when("/", {
+				templateUrl : context_root + "/apex/RecallFormMain"	
+			})
+			.when("/done", {
+				templateUrl : context_root + "/apex/RecallFormDone"
+			})
+			.otherwise({
+		        templateUrl : context_root + "/apex/RecallFormMain"
+		    });
+		    $locationProvider.html5Mode(true);
+		});
+
+		app.factory('VFRemotingFactory',function($q,$rootScope){  
+	       var factory = {};  
+	       factory.registerRecall = function(formData){  
+	           var deferred = $q.defer();  
+	           registerRecall(function(result){  
+	               $rootScope.$apply(function(){  
+	               	console.log(result);
+	                   deferred.resolve(JSON.parse( result )); 
+	               });  
+	           }, formData);  
+	           return deferred.promise;  
+	       };
+
+	       function registerRecall(callback, formData){  
+		       Visualforce.remoting.Manager.invokeAction(  
+		           '{!$RemoteAction.RecallFormController.registerRecall}', formData,
+		           callback,  
+		           {escape: false}  
+		       );
+		   };
+
+		   factory.getContact = function(contactId){  
+	           var deferred = $q.defer();  
+	           getContact(function(result){  
+	               $rootScope.$apply(function(){  
+	               	console.log(result);
+	                   deferred.resolve(JSON.parse( result )); 
+	               });  
+	           }, contactId);  
+	           return deferred.promise;  
+	       };
+
+	       function getContact(callback, contactId){  
+		       Visualforce.remoting.Manager.invokeAction(  
+		           '{!$RemoteAction.RecallFormController.getContact}', contactId,
+		           callback,  
+		           {escape: false}  
+		       );
+		   };
+
+		   return factory;
+   		});
+		
+		app.controller('FormCtrl',function($scope,$location,$routeParams,VFRemotingFactory){
+
+			$scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwf3bT7BhOz_-EAqbdx4sRVkhHICPd3Qw&libraries=places";
+			$scope.formData = {};
+			$scope.place = {};
+
+
+			var contactId = $location.search().Id;
+			console.log('contactId = ' + contactId);
+			console.log($location.search());
+
+			if (contactId != null) {
+				VFRemotingFactory.getContact(contactId).then(function(result){
+					console.log('getContact result:');
+					console.log(result);
+					$scope.formData = result;
+					
+				});
+			}
+			
+			$scope.addAttachment = function(recordID){
+			    var reader = new FileReader();
+			    if (document.getElementById('file-upload-input-01') == null) {
+			    	console.log('field not dom');
+			    	return;
+			    }
+			    var attachFile = document.getElementById('file-upload-input-01').files[0];
+
+			    if(attachFile == undefined){
+			        console.log('no file');
+			        return;
+			    }
+
+			    if(attachFile.size > 26214400){  //Where 26214400 is byte equivalent of 25MB
+			        console.log('Attachment size not supported');
+			    }
+
+			    reader.onload = function(e) {
+			        var attachment = new sforce.SObject('Attachment');  
+			        attachment.Name = attachFile.name;
+			        attachment.IsPrivate = false;  
+			        attachment.ContentType = attachFile.type;
+			        attachment.Body = (new sforce.Base64Binary(e.target.result)).toString();;
+			        attachment.Description = attachFile.name;
+			        attachment.ParentId = recordID;   //Where recordID is the ID of record to which you want to add your attachment
+			        var result = sforce.connection.create([attachment]);  
+			        if(result[0].getBoolean("success")){  
+			            console.log('file added successfully');
+			        }else{
+			            console.log('error occured');
+			            console.log(result);
+			        }
+			    };
+			    reader.readAsBinaryString(attachFile);
+			}
+			
+			$scope.register = function() {
+				console.log('register clicked');
+				VFRemotingFactory.registerRecall($scope.formDataAsJSON).then(function(result){
+					console.log('registerRecall result = ' + result.Id);
+					$scope.addAttachment(result.Id);
+					$location.path("/done");
+				});
+			}
+
+			
+			$scope.$watch('formData', function(f) {
+				$scope.formDataAsJSON = angular.toJson(f, true);
+			},true);
+
+			$scope.$watch('place', function(f) {
+				$scope.placeDataAsJSON = angular.toJson(f, true);
+				_.forEach($scope.place.address_components, function(value) {
+					console.log(value);
+					switch (value.types[0]) {
+						case 'street_number' : 
+							$scope.formData.streetNumber = value.long_name;
+							break;
+						case 'route' :
+							$scope.formData.route = value.long_name;
+							break;
+						case 'locality' :
+							$scope.formData.city = value.long_name;
+							break;
+						case 'administrative_area_level_1' :
+							$scope.formData.state = value.short_name;
+							break;
+						case 'postal_code' : 
+							$scope.formData.postalCode = value.long_name;
+							break;
+						case 'country' :
+							$scope.formData.country = value.long_name;
+							break;
+
+					}
+				});
+				if ($scope.formData.streetNumber != undefined) {
+					$scope.formData.street = $scope.formData.streetNumber + ' ' + $scope.formData.route;
+				}
+			},true);
+
+			$scope.placeCallback = function() {
+				$scope.place = this.getPlace();
+			}
+
+		});
+
+	</script>
+	<base href="/"/>
+	<apex:slds />
+	<body ng-app="StericylcleDemoApp" ng-controller="FormCtrl">
+		<div class="slds-scope">
+			<div class="ng-view"></div>
+		</div>
+	</body>
+</html>
+</apex:page>

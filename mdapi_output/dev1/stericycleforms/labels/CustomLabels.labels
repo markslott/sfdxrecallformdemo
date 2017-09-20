@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Recall_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Recall Address</shortDescription>
+        <value>Address</value>
+    </labels>
+    <labels>
+        <fullName>Recall_Attachment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Recall Attachment</shortDescription>
+        <value>Attachment</value>
+    </labels>
+    <labels>
+        <fullName>Recall_Form_Button</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Recall Form Button</shortDescription>
+        <value>Submit form</value>
+    </labels>
+    <labels>
+        <fullName>Recall_Form_Return_Instructions</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Recall Form Return Instructions</shortDescription>
+        <value>Since you are returning to a manufacturer, instructions will go here.</value>
+    </labels>
+    <labels>
+        <fullName>Recall_Form_Thank_You</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Recall Form Thank You</shortDescription>
+        <value>Your recall form has been submitted. Thank you.</value>
+    </labels>
+    <labels>
+        <fullName>Recall_Form_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Recall Form Title</shortDescription>
+        <value>Product Recall Form</value>
+    </labels>
+    <labels>
+        <fullName>Recall_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Recall Type</shortDescription>
+        <value>Type</value>
+    </labels>
+</CustomLabels>
